@@ -1,17 +1,24 @@
 package by.bsu.superweather.files
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement.SpaceBetween
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import com.google.accompanist.pager.rememberPagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -28,6 +35,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -133,43 +141,85 @@ fun mainCard(cday:MutableState<Data>, onClickSync:()->Unit, onClickSearch:()-> U
         }
     }
 }
+@Composable
+fun SearchHistoryList(
+    searchHistory: List<String>,
+    onCitySelected: (String) -> Unit
+) {
+    LazyColumn(
+        modifier = Modifier
+            .fillMaxSize()
+
+    ) {
+        items(searchHistory) { city ->
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onCitySelected(city) }
+                    .padding(4.dp)
+                    .clip(RoundedCornerShape(4.dp))
+                    .background(Color(0xFFFFC0CB))
+                    .alpha(0.8f)
+            ) {
+                Text(
+                    text = city,
+                    color = Color.White,
+                    modifier = Modifier
+                        .padding(16.dp) // Add padding for text
+                        .weight(1f)
+                )
+            }
+        }
+    }
+}
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable
-fun TabLayout(dayl: MutableState<List<Data>>,cday:MutableState<Data>) {
-    val tabL = listOf("HOURS", "DAY")
+fun TabLayout(dayl: MutableState<List<Data>>, cday: MutableState<Data>, searchHistory: List<String>, onCitySelected: (String) -> Unit) {
+    val tabL = listOf("HOURS", "DAY", "HISTORY")
     val ps = rememberPagerState()
     val tabI = ps.currentPage
     val cs = rememberCoroutineScope()
 
-    Column(modifier = Modifier.padding(start = 5.dp,end=5.dp).clip(RoundedCornerShape(4.dp))) {
-        TabRow(selectedTabIndex = tabI,
-            indicator = {
-                    pos -> TabRowDefaults.Indicator(modifier=Modifier.pagerTabIndicatorOffset(ps, pos))
-            },
-            backgroundColor = Pink80,contentColor = White,modifier = Modifier.alpha(0.8f)
-        ) {
-            tabL.forEachIndexed { index, text ->
-                Tab(selected = false, onClick = {
-                    cs.launch{
-                        ps.animateScrollToPage(index)
-                    }
-                },
-                    text = {
-                        Text(text = text,color = White)
-                    }
-                )
-            }
-        }
+    Row(modifier = Modifier.fillMaxWidth()) {
+        Column(modifier = Modifier
+            .weight(1f)
+            .padding(4.dp)
+            .clip(RoundedCornerShape(4.dp))) {
 
-        HorizontalPager(count = tabL.size,state=ps,modifier= Modifier.weight(1.0f)){
-                index ->
-            val list = when(index){
-                0 -> byHours(cday.value.hours)
-                1 -> dayl.value
-                else -> dayl.value
+            TabRow(
+                selectedTabIndex = tabI,
+                indicator = { pos -> TabRowDefaults.Indicator(modifier = Modifier.pagerTabIndicatorOffset(ps, pos)) },
+                backgroundColor = Color(0xFFFFC0CB),
+                contentColor = White,
+                modifier = Modifier.alpha(0.8f)
+            ) {
+                tabL.forEachIndexed { index, text ->
+                    Tab(
+                        selected = tabI == index,
+                        onClick = {
+                            cs.launch {
+                                ps.animateScrollToPage(index)
+                            }
+                        },
+                        text = { Text(text = text, color = White) }
+                    )
+                }
             }
-            Mlist(list,cday)
+
+            HorizontalPager(count = tabL.size, state = ps, modifier = Modifier.weight(1.0f)) { index ->
+                when (index) {
+                    0 -> Mlist(byHours(cday.value.hours), cday) // Assuming byHours returns List<Data>
+                    1 -> Mlist(dayl.value, cday) // Assuming dayl is List<Data>
+                    2 -> {
+                        Column(modifier = Modifier.fillMaxSize()) {
+                            SearchHistoryList(searchHistory) { selectedCity ->
+                                onCitySelected(selectedCity)
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

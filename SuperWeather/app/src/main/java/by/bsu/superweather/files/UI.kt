@@ -86,33 +86,48 @@ fun Mlist(arr: List<Data>, cday:MutableState<Data>) {
         }
     }
 }
+
 @Composable
-fun dSearch(dState:MutableState<Boolean>,onSubmit:(String)->Unit){
-    val dText = remember{
-        mutableStateOf("")
-    }
-    AlertDialog(onDismissRequest= {
-        dState.value = false
-    },confirmButton={
-        TextButton(onClick={
-            onSubmit(dText.value)
+fun dSearch(dState: MutableState<Boolean>, onSubmit: (String) -> Unit, searchHistory: MutableState<List<String>>) {
+    val dText = remember { mutableStateOf("") }
+
+    AlertDialog(
+        onDismissRequest = {
             dState.value = false
-        }){
-            Text(text = "Ok")
+        },
+        confirmButton = {
+            TextButton(onClick = {
+                val city = dText.value.trim()
+                if (city.isNotEmpty()) {
+                    // Submit the city and update the search history
+                    onSubmit(city)
+                    // Update search history
+                    if (city !in searchHistory.value) {
+                        searchHistory.value += city
+                    }
+                }
+                dState.value = false
+            }) {
+                Text(text = "Ok")
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = {
+                dState.value = false
+            }) {
+                Text(text = "Cancel")
+            }
+        },
+        title = {
+            Column(modifier = Modifier.fillMaxWidth()) {
+                Text(text = "Enter name of city:")
+                TextField(
+                    value = dText.value,
+                    onValueChange = {
+                        dText.value = it
+                    }
+                )
+            }
         }
-    },dismissButton = {
-        TextButton(onClick={
-            dState.value = false
-        }){
-            Text(text = "Cancel")
-        }
-    },title={
-        Column(modifier= Modifier.fillMaxWidth()){
-            Text(text = "Enter name of city:")
-            TextField(value = dText.value,onValueChange = {
-                dText.value = it
-            })
-        }
-    }
     )
 }
