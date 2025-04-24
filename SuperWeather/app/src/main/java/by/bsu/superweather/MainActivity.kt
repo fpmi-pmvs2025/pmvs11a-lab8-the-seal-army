@@ -66,6 +66,7 @@ class MainActivity : ComponentActivity() {
                 dSearch(
                     dState,
                     onSubmit = { cityName ->
+                        //отключайте полность интернет на эмуляторе
                         // Проверка соединения перед поиском города
                         CoroutineScope(Dispatchers.IO).launch {
                             if (isNetworkAvailable(this@MainActivity)) {
