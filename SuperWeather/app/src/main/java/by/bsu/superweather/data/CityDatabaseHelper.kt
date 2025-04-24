@@ -40,7 +40,6 @@ class CityDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         db.close()
     }
 
-    // Retrieve all cities from the database
     fun getAllCities(): List<String> {
         val cities = mutableListOf<String>()
         val db = this.readableDatabase
@@ -55,7 +54,5 @@ class CityDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         db.close()
         return cities
     }
-    fun dropDatabase(context: Context) {
-        context.deleteDatabase(CityDatabaseHelper.DATABASE_NAME)
-    }
+
 }

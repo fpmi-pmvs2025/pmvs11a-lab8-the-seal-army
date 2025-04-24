@@ -56,10 +56,6 @@ class MainActivity : ComponentActivity() {
             val dayl = remember { mutableStateOf(listOf<Data>()) }
             val cday = remember { mutableStateOf(Data("", "", "0.0", "", "", "0.0", "0.0", "")) }
             val dState = remember { mutableStateOf(false) }
-            //SearchHistoryScreen(searchHistory = searchHistory, cday = selectedData)
-           // checkNetworkStatus(this)
-            // MutableState for search history
-            //databaseHelper.dropDatabase(this)
             val searchHistory = remember { mutableStateOf(getSearchHistory()) }
 
             if (dState.value) {
