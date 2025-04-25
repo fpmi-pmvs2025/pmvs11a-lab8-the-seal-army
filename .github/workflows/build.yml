@@ -40,7 +40,7 @@ jobs:
       run: ./gradlew test
 
     - name: Archive test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-results
         path: app/build/test-results
@@ -76,7 +76,7 @@ jobs:
         script: ./gradlew connectedCheck
 
     - name: Archive UI test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ui-test-results
         path: app/build/reports/androidTests/connected
