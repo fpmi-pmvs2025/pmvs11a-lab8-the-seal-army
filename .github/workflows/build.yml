@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Set up JDK 21
       uses: actions/setup-java@v3
       with:
@@ -29,21 +29,25 @@ jobs:
         path: |
           ~/.gradle/caches
           ~/.gradle/wrapper
-        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        key: ${{ runner.os }}-gradle-${{ hashFiles('SuperWeather/**/*.gradle*', 'SuperWeather/**/gradle-wrapper.properties') }}
         restore-keys: |
           ${{ runner.os }}-gradle-
 
     - name: Build with Gradle
-      run: SuperWeather/gradlew build
+      run: |
+        cd SuperWeather
+        ./gradlew build
 
     - name: Run Unit Tests
-      run: SuperWeather/gradlew test
+      run: |
+        cd SuperWeather
+        ./gradlew test
 
     - name: Archive test results
       uses: actions/upload-artifact@v4
       with:
         name: test-results
-        path: app/build/test-results
+        path: SuperWeather/app/build/test-results
 
   instrumented-tests:
     runs-on: macos-latest
@@ -55,7 +59,7 @@ jobs:
         
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Set up JDK 21
       uses: actions/setup-java@v3
       with:
@@ -73,10 +77,12 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         profile: Nexus 6
-        script: SuperWeather/gradlew connectedCheck
+        script: |
+          cd SuperWeather
+          ./gradlew connectedCheck
 
     - name: Archive UI test results
       uses: actions/upload-artifact@v4
       with:
         name: ui-test-results
-        path: app/build/reports/androidTests/connected
+        path: SuperWeather/app/build/reports/androidTests/connected
