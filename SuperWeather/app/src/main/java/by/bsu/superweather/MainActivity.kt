@@ -62,8 +62,6 @@ class MainActivity : ComponentActivity() {
                 dSearch(
                     dState,
                     onSubmit = { cityName ->
-                        //отключайте полность интернет на эмуляторе
-                        // Проверка соединения перед поиском города
                         CoroutineScope(Dispatchers.IO).launch {
                             if (isNetworkAvailable(this@MainActivity)) {
                                 if (!searchHistory.value.contains(cityName)) {
@@ -97,7 +95,8 @@ class MainActivity : ComponentActivity() {
                     mainCard(
                         cday,
                         onClickSync = { gData("Minsk", this@MainActivity, dayl, cday) },
-                        onClickSearch = { dState.value = true }
+                        onClickSearch = { dState.value = true },
+
                     )
 
                     // Pass the search history and onCitySelected function
