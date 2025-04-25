@@ -1,5 +1,6 @@
 package by.bsu.superweather.data
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
@@ -40,6 +41,7 @@ class CityDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         db.close()
     }
 
+    @SuppressLint("Range")
     fun getAllCities(): List<String> {
         val cities = mutableListOf<String>()
         val db = this.readableDatabase
