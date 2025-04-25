@@ -75,7 +75,7 @@ jobs:
       with:
         api-level: ${{ matrix.api-level }}
         target: ${{ matrix.target }}
-        arch: x86_64
+        arch: arm64
         script: |
           adb wait-for-device
           adb shell getprop sys.boot_completed | grep -m 1 '1'
