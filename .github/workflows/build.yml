@@ -72,6 +72,7 @@ jobs:
       
     - name: Start Android Emulator
       uses: reactivecircus/android-emulator-runner@v2
+      working-directory: ./SuperWeather
       with:
         api-level: ${{ matrix.api-level }}
         target: ${{ matrix.target }}
@@ -81,7 +82,6 @@ jobs:
         script: |
           adb wait-for-device
           adb shell input keyevent 82
-          cd SuperWeather
           ./gradlew connectedAndroidTest --continue
 
     - name: Archive UI test results
