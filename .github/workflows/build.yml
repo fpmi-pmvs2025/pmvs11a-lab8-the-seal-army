@@ -20,8 +20,11 @@ jobs:
         distribution: 'adopt'
         cache: gradle
 
+    - name: Change Directory
+      run: cd SuperWeather
+
     - name: Grant execute permission for gradlew
-      run: chmod +x ./gradlew
+      run: chmod +x gradlew
 
     - name: Cache Gradle packages
       uses: actions/cache@v3
@@ -63,8 +66,11 @@ jobs:
         distribution: 'adopt'
         cache: gradle
 
+    - name: Change Directory
+      run: cd SuperWeather
+      
     - name: Grant execute permission for gradlew
-      run: chmod +x ./gradlew
+      run: chmod +x gradlew
       
     - name: Run UI Tests
       uses: reactivecircus/android-emulator-runner@v2
