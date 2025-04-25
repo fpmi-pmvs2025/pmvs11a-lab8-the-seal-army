@@ -52,6 +52,9 @@ jobs:
   instrumented-tests:
     runs-on: macos-13
     needs: build
+    defaults:
+      run:
+        working-directory: ./SuperWeather
     strategy:
       matrix:
         api-level: [26]
@@ -68,7 +71,7 @@ jobs:
         cache: gradle
 
     - name: Grant execute permission for gradlew
-      run: chmod +x SuperWeather/gradlew
+      run: chmod +x ./gradlew
       
     - name: Start Android Emulator
       uses: reactivecircus/android-emulator-runner@v2
@@ -81,10 +84,10 @@ jobs:
         script: |
           adb wait-for-device
           adb shell input keyevent 82
-          ./SuperWeather/gradlew connectedAndroidTest --continue
+          ./gradlew connectedAndroidTest --continue
 
     - name: Archive UI test results
       uses: actions/upload-artifact@v4
       with:
         name: ui-test-results
-        path: SuperWeather/app/build/reports/androidTests/connected
+        path: app/build/reports/androidTests/connected
