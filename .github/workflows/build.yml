@@ -80,6 +80,7 @@ jobs:
         script: |
           adb wait-for-device
           adb shell getprop sys.boot_completed | grep -m 1 '1'
+          cd SuperWeather
           ./gradlew connectedCheck
 
     - name: Archive UI test results
