@@ -56,18 +56,12 @@ class MainActivity : ComponentActivity() {
             val dayl = remember { mutableStateOf(listOf<Data>()) }
             val cday = remember { mutableStateOf(Data("", "", "0.0", "", "", "0.0", "0.0", "")) }
             val dState = remember { mutableStateOf(false) }
-            //SearchHistoryScreen(searchHistory = searchHistory, cday = selectedData)
-           // checkNetworkStatus(this)
-            // MutableState for search history
-            //databaseHelper.dropDatabase(this)
             val searchHistory = remember { mutableStateOf(getSearchHistory()) }
 
             if (dState.value) {
                 dSearch(
                     dState,
                     onSubmit = { cityName ->
-                        //отключайте полность интернет на эмуляторе
-                        // Проверка соединения перед поиском города
                         CoroutineScope(Dispatchers.IO).launch {
                             if (isNetworkAvailable(this@MainActivity)) {
                                 if (!searchHistory.value.contains(cityName)) {
@@ -101,7 +95,8 @@ class MainActivity : ComponentActivity() {
                     mainCard(
                         cday,
                         onClickSync = { gData("Minsk", this@MainActivity, dayl, cday) },
-                        onClickSearch = { dState.value = true }
+                        onClickSearch = { dState.value = true },
+
                     )
 
                     // Pass the search history and onCitySelected function

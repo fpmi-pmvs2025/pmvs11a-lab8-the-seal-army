@@ -37,6 +37,7 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.White
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
@@ -119,7 +120,8 @@ fun mainCard(cday:MutableState<Data>, onClickSync:()->Unit, onClickSearch:()-> U
                         IconButton(onClick = {
                             onClickSearch.invoke()
 
-                        }){
+                        }, modifier = Modifier.testTag("SearchButton"))
+                        {
                             Icon(painter = painterResource(id = R.drawable.search),contentDescription= "sky",tint = White)
                         }
                         Text(modifier = Modifier.padding(top = 9.dp, start = 3.dp),
