@@ -6,6 +6,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
 class CityDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -20,7 +21,7 @@ class CityDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
     }
 
     override fun onCreate(db: SQLiteDatabase) {
-        val createTable = "CREATE TABLE $TABLE_NAME (" +
+        val createTable = "CREATE TABLE IF NOT EXISTS $TABLE_NAME (" +
                 "$COLUMN_NAME TEXT PRIMARY KEY," +
                 "$COLUMN_COUNTRY TEXT," +
                 "$COLUMN_TEMPERATURE TEXT," +
@@ -32,12 +33,17 @@ class CityDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         db.execSQL("DROP TABLE IF EXISTS $TABLE_NAME")
         onCreate(db)
     }
-    fun insertCity(cityName: String) {
+
+    fun insertCity(cityName: String, country: String = "", temperature: String = "", description: String = "") {
+        Log.d("CityDatabaseHelper", "Inserting city: $cityName")
         val db = this.writableDatabase
         val values = ContentValues().apply {
             put(COLUMN_NAME, cityName)
+            put(COLUMN_COUNTRY, country)
+            put(COLUMN_TEMPERATURE, temperature)
+            put(COLUMN_DESCRIPTION, description)
         }
-        db.insert(TABLE_NAME, null, values)
+        db.insertWithOnConflict(TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_REPLACE)
         db.close()
     }
 
@@ -54,6 +60,7 @@ class CityDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         }
         cursor.close()
         db.close()
+        Log.d("CityDatabaseHelper", "Fetched cities: $cities")
         return cities
     }
 

@@ -1,5 +1,6 @@
 package by.bsu.superweather.files
 
+import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -103,9 +104,10 @@ fun dSearch(dState: MutableState<Boolean>, onSubmit: (String) -> Unit, searchHis
                     // Submit the city and update the search history
                     onSubmit(city)
                     // Update search history
-                    if (city !in searchHistory.value) {
-                        searchHistory.value += city
-                    }
+//                    if (city !in searchHistory.value) {
+//                        Log.d("SearchHistoryFromDSearch", "Submitting city: $city")
+//                        searchHistory.value += city
+//                    }
                 }
                 dState.value = false
             },

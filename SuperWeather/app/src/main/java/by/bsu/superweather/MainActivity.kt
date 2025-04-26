@@ -53,10 +53,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         databaseHelper = CityDatabaseHelper(this)
         setContent {
+            val searchHistory = remember { mutableStateOf(getSearchHistory()) }
             val dayl = remember { mutableStateOf(listOf<Data>()) }
             val cday = remember { mutableStateOf(Data("", "", "0.0", "", "", "0.0", "0.0", "")) }
             val dState = remember { mutableStateOf(false) }
-            val searchHistory = remember { mutableStateOf(getSearchHistory()) }
 
             if (dState.value) {
                 dSearch(
@@ -64,8 +64,10 @@ class MainActivity : ComponentActivity() {
                     onSubmit = { cityName ->
                         CoroutineScope(Dispatchers.IO).launch {
                             if (isNetworkAvailable(this@MainActivity)) {
-                                if (!searchHistory.value.contains(cityName)) {
+                                Log.d("SearchHistory", "Submitting city: $cityName")
+                                if (cityName !in searchHistory.value) {
                                     searchHistory.value += cityName
+                                    Log.d("SearchHistory", "Added city: $cityName")
                                     saveCityToHistory(cityName)
                                 }
                                 // Запрос данных о городе
