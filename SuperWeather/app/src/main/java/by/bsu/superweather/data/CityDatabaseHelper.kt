@@ -6,7 +6,6 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.util.Log
 
 class CityDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -35,7 +34,6 @@ class CityDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
     }
 
     fun insertCity(cityName: String, country: String = "", temperature: String = "", description: String = "") {
-        Log.d("CityDatabaseHelper", "Inserting city: $cityName")
         val db = this.writableDatabase
         val values = ContentValues().apply {
             put(COLUMN_NAME, cityName)
@@ -60,7 +58,6 @@ class CityDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         }
         cursor.close()
         db.close()
-        Log.d("CityDatabaseHelper", "Fetched cities: $cities")
         return cities
     }
 
