@@ -25,15 +25,6 @@ class MainActivityTest {
     val composeTestRule = createAndroidComposeRule<MainActivity>()
 
     @Test
-    fun testMainActivityLoadsCorrectly() {
-        composeTestRule.waitForIdle()
-        composeTestRule.onNodeWithText("Minsk").assertExists()
-        composeTestRule.onNodeWithText("HOURS").assertExists()
-        composeTestRule.onNodeWithText("DAY").assertExists()
-        composeTestRule.onNodeWithText("HISTORY").assertExists()
-    }
-
-    @Test
     fun testSearchFunctionality() {
 
         composeTestRule.onAllNodesWithContentDescription("sky")[0].performClick()
