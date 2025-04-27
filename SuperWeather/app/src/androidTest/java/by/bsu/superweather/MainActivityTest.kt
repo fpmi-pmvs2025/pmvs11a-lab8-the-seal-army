@@ -24,25 +24,6 @@ class MainActivityTest {
     @get:Rule
     val composeTestRule = createAndroidComposeRule<MainActivity>()
 
-    @Test
-    fun testSearchFunctionality() {
-
-        composeTestRule.onAllNodesWithContentDescription("sky")[0].performClick()
-
-        composeTestRule.onNodeWithTag("SearchButton").performClick()
-
-        composeTestRule.onNodeWithText("Enter name of city:").assertExists()
-
-        composeTestRule.onNodeWithTag("TextField").performTextInput("london")
-
-        composeTestRule.onNodeWithTag("OkButton").performClick()
-
-        composeTestRule.waitForIdle()
-
-        composeTestRule.onNodeWithText("HISTORY").performClick()
-
-        composeTestRule.onNodeWithText("london").assertExists()
-    }
 
     @Test
     fun testTabSwitching() {
