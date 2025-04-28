@@ -1,0 +1,158 @@
+[
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/xml_backup_rules.xml.flat",
+        "source": "by.bsu.superweather.app-main-51:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/drawable_sync.xml.flat",
+        "source": "by.bsu.superweather.app-main-51:/drawable/sync.xml"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xxxhdpi_app_icon.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xxxhdpi/app_icon.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xhdpi_app_icon_round.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xhdpi/app_icon_round.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xxxhdpi_app_icon_round.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xxxhdpi/app_icon_round.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xhdpi_app_icon_foreground.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xhdpi/app_icon_foreground.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/drawable_sky.jpg.flat",
+        "source": "by.bsu.superweather.app-main-51:/drawable/sky.jpg"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/drawable_weather.png.flat",
+        "source": "by.bsu.superweather.app-main-51:/drawable/weather.png"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/drawable_search.xml.flat",
+        "source": "by.bsu.superweather.app-main-51:/drawable/search.xml"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-anydpi-v26_app_icon.xml.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-anydpi-v26/app_icon.xml"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xxhdpi_app_icon_foreground.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xxhdpi/app_icon_foreground.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-anydpi-v26_app_icon_round.xml.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-anydpi-v26/app_icon_round.xml"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-mdpi_app_icon.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-mdpi/app_icon.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-hdpi_app_icon.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-hdpi/app_icon.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xxxhdpi_app_icon_foreground.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xxxhdpi/app_icon_foreground.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-hdpi_app_icon_round.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-hdpi/app_icon_round.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-mdpi_app_icon_round.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-mdpi/app_icon_round.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/drawable_ic_launcher_background.xml.flat",
+        "source": "by.bsu.superweather.app-main-51:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xxhdpi_app_icon_round.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xxhdpi/app_icon_round.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-mdpi_app_icon_foreground.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-mdpi/app_icon_foreground.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-hdpi_app_icon_foreground.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-hdpi/app_icon_foreground.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xxhdpi_app_icon.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xxhdpi/app_icon.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/drawable_water.jpg.flat",
+        "source": "by.bsu.superweather.app-main-51:/drawable/water.jpg"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "by.bsu.superweather.app-main-51:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/xml_data_extraction_rules.xml.flat",
+        "source": "by.bsu.superweather.app-main-51:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/mipmap-xhdpi_app_icon.webp.flat",
+        "source": "by.bsu.superweather.app-main-51:/mipmap-xhdpi/app_icon.webp"
+    },
+    {
+        "merged": "by.bsu.superweather.app-debug-49:/drawable_skyy.jpg.flat",
+        "source": "by.bsu.superweather.app-main-51:/drawable/skyy.jpg"
+    }
+]
