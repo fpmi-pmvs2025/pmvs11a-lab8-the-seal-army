@@ -2,15 +2,7 @@
 
 ## Структура базы данных
 
-```mermaid
-erDiagram
-    CITIES ||--o{ WEATHER_DATA : contains
-    CITIES {
-        string name PK "Название города"
-        string country "Страна"
-        string temperature "Температура"
-        string description "Описание погоды"
-    }
-```
+![DatabaseSchema](https://github.com/user-attachments/assets/5f961a00-1741-41aa-bc5b-d8af9433a5e8)
+
 ## SQL-файл
 [SQL](https://github.com/fpmi-pmvs2025/pmvs11a-lab8-the-seal-army/blob/docs/assets/Database/script.sql)
