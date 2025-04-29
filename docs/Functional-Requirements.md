@@ -21,6 +21,7 @@
 - Автоматическое обновление данных
 
 ## 2. Use Case диаграмма
+
 <img src="https://github.com/fpmi-pmvs2025/pmvs11a-lab8-the-seal-army/blob/f376e8f1421231fb36f22e160b1f776dbc767f31/assets/Diagrams/useCaseDiagram.png" alt="Use Case Diagram" width="900"/>
 
 Акторы:
