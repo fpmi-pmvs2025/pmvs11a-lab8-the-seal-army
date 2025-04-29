@@ -22,7 +22,7 @@
 
 ## 2. Use Case диаграмма
 
-<img src="https://github.com/fpmi-pmvs2025/pmvs11a-lab8-the-seal-army/blob/f376e8f1421231fb36f22e160b1f776dbc767f31/assets/Diagrams/useCaseDiagram.png" alt="Use Case Diagram" width="900"/>
+![useCaseDiagram](https://github.com/user-attachments/assets/78a616a2-32dc-45c5-a263-81681752becb)
 
 Акторы:
 - Пользователь (основной актор)
