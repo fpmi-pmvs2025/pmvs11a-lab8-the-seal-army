@@ -1,0 +1,220 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="by.bsu.superweather"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="29"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:4:5-66
+11-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:5:5-78
+12-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:5:22-76
+13
+14    <permission
+14-->[androidx.core:core:1.15.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8f93002722cd24a326dbeab4a83b28ea\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+15        android:name="by.bsu.superweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.15.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8f93002722cd24a326dbeab4a83b28ea\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.15.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8f93002722cd24a326dbeab4a83b28ea\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="by.bsu.superweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.15.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8f93002722cd24a326dbeab4a83b28ea\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.15.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8f93002722cd24a326dbeab4a83b28ea\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+19    <uses-permission android:name="android.permission.REORDER_TASKS" />
+19-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:24:5-72
+19-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:24:22-69
+20
+21    <queries>
+21-->[androidx.test:runner:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8822a15ec373e87fdca55e0fabe6fd00\transformed\runner-1.5.0\AndroidManifest.xml:24:5-28:15
+22        <package android:name="androidx.test.orchestrator" />
+22-->[androidx.test:runner:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8822a15ec373e87fdca55e0fabe6fd00\transformed\runner-1.5.0\AndroidManifest.xml:25:9-62
+22-->[androidx.test:runner:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8822a15ec373e87fdca55e0fabe6fd00\transformed\runner-1.5.0\AndroidManifest.xml:25:18-59
+23        <package android:name="androidx.test.services" />
+23-->[androidx.test:runner:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8822a15ec373e87fdca55e0fabe6fd00\transformed\runner-1.5.0\AndroidManifest.xml:26:9-58
+23-->[androidx.test:runner:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8822a15ec373e87fdca55e0fabe6fd00\transformed\runner-1.5.0\AndroidManifest.xml:26:18-55
+24        <package android:name="com.google.android.apps.common.testing.services" />
+24-->[androidx.test:runner:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8822a15ec373e87fdca55e0fabe6fd00\transformed\runner-1.5.0\AndroidManifest.xml:27:9-83
+24-->[androidx.test:runner:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8822a15ec373e87fdca55e0fabe6fd00\transformed\runner-1.5.0\AndroidManifest.xml:27:18-80
+25    </queries>
+26
+27    <application
+27-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:7:5-28:19
+28        android:allowBackup="true"
+28-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:8:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.15.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\8f93002722cd24a326dbeab4a83b28ea\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+30        android:dataExtractionRules="@xml/data_extraction_rules"
+30-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:9:9-65
+31        android:debuggable="true"
+32        android:extractNativeLibs="false"
+33        android:fullBackupContent="@xml/backup_rules"
+33-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:10:9-54
+34        android:icon="@mipmap/app_icon"
+34-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:11:9-40
+35        android:label="@string/app_name"
+35-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:12:9-41
+36        android:roundIcon="@mipmap/app_icon_round"
+36-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:13:9-51
+37        android:supportsRtl="true"
+37-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:14:9-35
+38        android:testOnly="true"
+39        android:theme="@style/Theme.SuperWeather" >
+39-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:15:9-50
+40        <activity
+40-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:17:9-27:20
+41            android:name="by.bsu.superweather.MainActivity"
+41-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:18:13-41
+42            android:exported="true"
+42-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:19:13-36
+43            android:label="@string/app_name"
+43-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:20:13-45
+44            android:theme="@style/Theme.SuperWeather" >
+44-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:21:13-54
+45            <intent-filter>
+45-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:22:13-26:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:23:17-69
+46-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:23:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:25:17-77
+48-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:25:27-74
+49            </intent-filter>
+50        </activity>
+51        <activity
+51-->[androidx.compose.ui:ui-tooling-android:1.8.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\236a24961df99c4aa732b4f64246b29d\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+52            android:name="androidx.compose.ui.tooling.PreviewActivity"
+52-->[androidx.compose.ui:ui-tooling-android:1.8.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\236a24961df99c4aa732b4f64246b29d\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+53            android:exported="true" />
+53-->[androidx.compose.ui:ui-tooling-android:1.8.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\236a24961df99c4aa732b4f64246b29d\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+54        <activity
+54-->[androidx.compose.ui:ui-test-manifest:1.8.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\b320c35705bdc1b7f1ba786759b476ab\transformed\ui-test-manifest-1.8.0\AndroidManifest.xml:23:9-26:79
+55            android:name="androidx.activity.ComponentActivity"
+55-->[androidx.compose.ui:ui-test-manifest:1.8.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\b320c35705bdc1b7f1ba786759b476ab\transformed\ui-test-manifest-1.8.0\AndroidManifest.xml:24:13-63
+56            android:exported="true"
+56-->[androidx.compose.ui:ui-test-manifest:1.8.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\b320c35705bdc1b7f1ba786759b476ab\transformed\ui-test-manifest-1.8.0\AndroidManifest.xml:25:13-36
+57            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
+57-->[androidx.compose.ui:ui-test-manifest:1.8.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\b320c35705bdc1b7f1ba786759b476ab\transformed\ui-test-manifest-1.8.0\AndroidManifest.xml:26:13-76
+58
+59        <provider
+59-->[androidx.emoji2:emoji2:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\9eff4e06877e3159d38f56e735ad84b0\transformed\emoji2-1.4.0\AndroidManifest.xml:24:9-32:20
+60            android:name="androidx.startup.InitializationProvider"
+60-->[androidx.emoji2:emoji2:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\9eff4e06877e3159d38f56e735ad84b0\transformed\emoji2-1.4.0\AndroidManifest.xml:25:13-67
+61            android:authorities="by.bsu.superweather.androidx-startup"
+61-->[androidx.emoji2:emoji2:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\9eff4e06877e3159d38f56e735ad84b0\transformed\emoji2-1.4.0\AndroidManifest.xml:26:13-68
+62            android:exported="false" >
+62-->[androidx.emoji2:emoji2:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\9eff4e06877e3159d38f56e735ad84b0\transformed\emoji2-1.4.0\AndroidManifest.xml:27:13-37
+63            <meta-data
+63-->[androidx.emoji2:emoji2:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\9eff4e06877e3159d38f56e735ad84b0\transformed\emoji2-1.4.0\AndroidManifest.xml:29:13-31:52
+64                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+64-->[androidx.emoji2:emoji2:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\9eff4e06877e3159d38f56e735ad84b0\transformed\emoji2-1.4.0\AndroidManifest.xml:30:17-75
+65                android:value="androidx.startup" />
+65-->[androidx.emoji2:emoji2:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\9eff4e06877e3159d38f56e735ad84b0\transformed\emoji2-1.4.0\AndroidManifest.xml:31:17-49
+66            <meta-data
+66-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\Asus\.gradle\caches\8.10.2\transforms\4e9c95a0c0a387b1832d3871ae076b56\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+67                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+67-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\Asus\.gradle\caches\8.10.2\transforms\4e9c95a0c0a387b1832d3871ae076b56\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+68                android:value="androidx.startup" />
+68-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\Asus\.gradle\caches\8.10.2\transforms\4e9c95a0c0a387b1832d3871ae076b56\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+69            <meta-data
+69-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+70                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+70-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+71                android:value="androidx.startup" />
+71-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+72        </provider>
+73
+74        <activity
+74-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:27:9-34:20
+75            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+75-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:28:13-99
+76            android:exported="true"
+76-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:29:13-36
+77            android:theme="@style/WhiteBackgroundTheme" >
+77-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:30:13-56
+78            <intent-filter android:priority="-100" >
+78-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:31:13-33:29
+78-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:31:28-51
+79                <category android:name="android.intent.category.LAUNCHER" />
+79-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:25:17-77
+79-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:25:27-74
+80            </intent-filter>
+81        </activity>
+82        <activity
+82-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:35:9-42:20
+83            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+83-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:36:13-95
+84            android:exported="true"
+84-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:37:13-36
+85            android:theme="@style/WhiteBackgroundTheme" >
+85-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:38:13-56
+86            <intent-filter android:priority="-100" >
+86-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:31:13-33:29
+86-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:31:28-51
+87                <category android:name="android.intent.category.LAUNCHER" />
+87-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:25:17-77
+87-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:25:27-74
+88            </intent-filter>
+89        </activity>
+90        <activity
+90-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:43:9-50:20
+91            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+91-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:44:13-103
+92            android:exported="true"
+92-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:45:13-36
+93            android:theme="@style/WhiteBackgroundDialogTheme" >
+93-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:46:13-62
+94            <intent-filter android:priority="-100" >
+94-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:31:13-33:29
+94-->[androidx.test:core:1.5.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\78f4a93a420066eff8e5f99006c4c212\transformed\core-1.5.0\AndroidManifest.xml:31:28-51
+95                <category android:name="android.intent.category.LAUNCHER" />
+95-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:25:17-77
+95-->F:\Proga\6sem\Mobile\pmvs11a-lab8-the-seal-army\SuperWeather\app\src\main\AndroidManifest.xml:25:27-74
+96            </intent-filter>
+97        </activity>
+98
+99        <receiver
+99-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+100            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+101            android:directBootAware="false"
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+102            android:enabled="true"
+102-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+103            android:exported="true"
+103-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+104            android:permission="android.permission.DUMP" >
+104-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+105            <intent-filter>
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+106                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+107            </intent-filter>
+108            <intent-filter>
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+109                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+110            </intent-filter>
+111            <intent-filter>
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+112                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+113            </intent-filter>
+114            <intent-filter>
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+115                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Asus\.gradle\caches\8.10.2\transforms\954df8aacb3829b7f5d1290d4ed5d84a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+116            </intent-filter>
+117        </receiver>
+118    </application>
+119
+120</manifest>
