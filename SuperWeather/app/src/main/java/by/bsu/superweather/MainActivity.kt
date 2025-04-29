@@ -48,7 +48,7 @@ const val api = "90916526d26c4ab8a2e201046232911"
 
 class MainActivity : ComponentActivity() {
     private lateinit var databaseHelper: CityDatabaseHelper
-
+    private var UIinitiated = false;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         databaseHelper = CityDatabaseHelper(this)
@@ -83,8 +83,12 @@ class MainActivity : ComponentActivity() {
                 )
             }
 
-            // Default data fetch
-            gData("Minsk", this, dayl, cday)
+            if(!UIinitiated)
+            {
+                // Default data fetch
+                gData("Minsk", this, dayl, cday)
+                UIinitiated = true;
+            }
 
             SuperWeatherTheme {
                 Image(
