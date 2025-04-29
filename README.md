@@ -27,10 +27,10 @@
 1. Клонируйте репозиторий:
 ```bash
       git clone https://github.com/fpmi-pmvs2025/pmvs11a-lab8-the-seal-army.git
-   cd pmvs11a-lab8-the-seal-army
+      cd pmvs11a-lab8-the-seal-army
 ```
 
-3. Откройте проект в Android Studio:
+2. Откройте проект в Android Studio:
 - Запустите Android Studio
 - Выберите File → Open и укажите папку проекта
 - Дождитесь завершения индексации и синхронизации Gradle (может занять несколько минут)
